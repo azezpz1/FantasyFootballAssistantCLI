@@ -152,11 +152,13 @@
   </ItemDefinitionGroup>
   <ItemGroup>
     <ClCompile Include="CSVReader.cpp" />
+    <ClCompile Include="CSVRow.cpp" />
     <ClCompile Include="CSVTable.cpp" />
     <ClCompile Include="FantasyFootballAssistantCLI.cpp" />
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="CSVReader.h" />
+    <ClInclude Include="CSVRow.h" />
     <ClInclude Include="CSVTable.h" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
