@@ -151,12 +151,14 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
+    <ClCompile Include="CSVColumn.cpp" />
     <ClCompile Include="CSVReader.cpp" />
     <ClCompile Include="CSVRow.cpp" />
     <ClCompile Include="CSVTable.cpp" />
     <ClCompile Include="FantasyFootballAssistantCLI.cpp" />
   </ItemGroup>
   <ItemGroup>
+    <ClInclude Include="CSVColumn.h" />
     <ClInclude Include="CSVReader.h" />
     <ClInclude Include="CSVRow.h" />
     <ClInclude Include="CSVTable.h" />
