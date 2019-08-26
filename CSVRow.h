@@ -9,5 +9,6 @@ public:
 	
 private:
 	std::vector<std::string> elements;
+	std::vector<std::string> ConvertStringToVector(std::string& line);
 };
 
