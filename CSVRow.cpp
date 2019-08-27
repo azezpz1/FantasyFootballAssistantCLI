@@ -13,7 +13,7 @@ std::map<std::string, std::string> CSVRow::ConvertStringToMap(std::string& line,
 	std::stringstream stream(line);
 	std::string elem;
 
-	//Temporary elements is a vector of strings that will be used later for us to creat our map
+	//Temporary elements is a vector of strings that will be used later for us to create our map
 	std::vector<std::string> temp_elements;
 	while (std::getline(stream, elem, ','))
 	{
