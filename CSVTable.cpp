@@ -1,3 +1,4 @@
+#include <sstream>
 #include "CSVTable.h"
 std::vector<std::string> CSVTable::ConvertColumnNamesStringToVector(std::string column_name_line)
 {
