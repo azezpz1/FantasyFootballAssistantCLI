@@ -2,7 +2,7 @@
 #include "CSVTable.h"
 #include "CSVRow.h"
 
-CSVTable::CSVTable(std::ifstream CSVFileStream)
+CSVTable::CSVTable(std::ifstream &CSVFileStream)
 {
 	std::string name_line;
 	std::getline(CSVFileStream, name_line);
