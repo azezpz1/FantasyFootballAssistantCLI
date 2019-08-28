@@ -151,7 +151,13 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
+    <ClCompile Include="CSVRow.cpp" />
+    <ClCompile Include="CSVTable.cpp" />
     <ClCompile Include="FantasyFootballAssistantCLI.cpp" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="CSVRow.h" />
+    <ClInclude Include="CSVTable.h" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">
