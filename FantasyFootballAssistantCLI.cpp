@@ -2,10 +2,22 @@
 //
 
 #include <iostream>
+#include <fstream>
+#include <string>
+#include "CSVTable.h"
+
+using namespace std;
 
 int main()
 {
-    std::cout << "Hello World!\n";
+	string file_path;
+	
+	cout << "Provide the path to the beersheets csv file: ";
+	cin >> file_path;
+	ifstream CSVFileStream;
+	CSVFileStream.open(file_path);
+	CSVTable csv(CSVFileStream);
+
 }
 
 // Run program: Ctrl + F5 or Debug > Start Without Debugging menu
