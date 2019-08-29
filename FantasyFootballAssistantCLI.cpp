@@ -25,6 +25,22 @@ int main()
 	{
 		cout << "Type the name of the player someone else has picked, 'myturn' if you want a suggestion and 'exit' if you're done." << endl;
 		cin >> user_request;
+		
+		if (user_request == "myturn")
+		{
+			SuggestAPlayer(csv);
+		}
+
+		else if (user_request == "exit")
+		{
+			exit_requested = true;
+		}
+
+		else
+		{
+			LogAPick(csv);
+		}
+
 	}
 
 
