@@ -6,6 +6,7 @@
 #include <string>
 #include "FantasyFootballAssistantCLI.h"
 #include "CSVTable.h"
+#include "CSVRow.h"
 
 using namespace std;
 
@@ -39,7 +40,7 @@ int main()
 
 		else
 		{
-			LogAPick(csv);
+			LogAPick(csv, user_request);
 		}
 
 	}
@@ -51,7 +52,19 @@ void SuggestAPlayer(CSVTable& csv)
 
 }
 
-void LogAPick(CSVTable& csv)
+void LogAPick(CSVTable& csv, string input)
 {
-
+	int count = 0;
+	for (CSVRow row : csv.rows)
+	{
+		string player_name = row.elements["Name"];
+		if (player_name == input)
+		{
+			csv.rows.erase(csv.rows.begin() + count);
+		}
+		else
+		{
+			count++;
+		}
+	}
 }
