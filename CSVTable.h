@@ -8,9 +8,7 @@
 class CSVTable
 {
 public:
-	CSVTable(std::ifstream CSVFileStream);
-	std::string GetElement(int column_id, int row_id);
-	CSVRow GetRow(int row_id);
+	CSVTable(std::ifstream &CSVFileStream);
 	std::vector<CSVRow> rows;
 
 private:
