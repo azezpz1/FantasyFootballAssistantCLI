@@ -20,10 +20,14 @@ int main()
 	cout << "File loaded." << endl;
 	cout << endl;
 	bool exit_requested = false;
+	string user_request;
 	while (!exit_requested)
 	{
 		cout << "Type the name of the player someone else has picked, 'myturn' if you want a suggestion and 'exit' if you're done." << endl;
+		cin >> user_request;
 	}
+
+
 
 }
 
