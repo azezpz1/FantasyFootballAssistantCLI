@@ -4,6 +4,7 @@
 #include <iostream>
 #include <fstream>
 #include <string>
+#include "FantasyFootballAssistantCLI.h"
 #include "CSVTable.h"
 
 using namespace std;
@@ -43,6 +44,14 @@ int main()
 
 	}
 
+}
 
+void SuggestAPlayer(CSVTable& csv)
+{
+
+}
+
+void LogAPick(CSVTable& csv)
+{
 
 }
