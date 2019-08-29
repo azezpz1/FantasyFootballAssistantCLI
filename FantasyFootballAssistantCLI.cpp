@@ -17,6 +17,13 @@ int main()
 	ifstream CSVFileStream;
 	CSVFileStream.open(file_path);
 	CSVTable csv(CSVFileStream);
+	cout << "File loaded." << endl;
+	cout << endl;
+	bool exit_requested = false;
+	while (!exit_requested)
+	{
+		cout << "Type the name of the player someone else has picked, 'myturn' if you want a suggestion and 'exit' if you're done." << endl;
+	}
 
 }
 
