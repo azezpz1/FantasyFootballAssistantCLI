@@ -1,10 +1,12 @@
 #include <sstream>
 #include "CSVRow.h"
 
+std::map<std::string, std::string> elements;
+
 CSVRow::CSVRow(std::vector<std::string> ColumnNames, std::string line)
 {
 	int row_length = ColumnNames.size();
-	std::map<std::string, std::string> elements = ConvertStringToMap(line, ColumnNames);
+	elements = ConvertStringToMap(line, ColumnNames);
 
 }
 
@@ -20,7 +22,7 @@ std::map<std::string, std::string> CSVRow::ConvertStringToMap(std::string& line,
 		temp_elements.push_back(elem);
 	}
 
-	std::map<std::string, std::string> elements;
+	std::map<std::string, std::string> local_map_elements;
 
 	if (temp_elements.size() != ColumnNames.size())
 	{
@@ -32,9 +34,9 @@ std::map<std::string, std::string> CSVRow::ConvertStringToMap(std::string& line,
 	{
 		for (unsigned int i = 0; i < temp_elements.size(); i++)
 		{
-			elements[ColumnNames[i]] = temp_elements[i];
+			local_map_elements.emplace(ColumnNames[i], temp_elements[i]);
 		}
 	}
 
-	return elements;
+	return local_map_elements;
 }
