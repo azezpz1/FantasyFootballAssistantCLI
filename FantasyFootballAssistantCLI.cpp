@@ -21,6 +21,8 @@ int main()
 	CSVTable csv(CSVFileStream);
 	cout << "File loaded." << endl;
 	cout << endl;
+
+	vector<string> picked_positions;
 	bool exit_requested = false;
 	string user_request;
 	while (!exit_requested)
@@ -30,7 +32,7 @@ int main()
 		
 		if (user_request == "myturn")
 		{
-			SuggestAPlayer(csv);
+			SuggestAPlayer(csv, picked_positions);
 		}
 
 		else if (user_request == "exit")
@@ -47,7 +49,7 @@ int main()
 
 }
 
-void SuggestAPlayer(CSVTable& csv)
+void SuggestAPlayer(CSVTable& csv, vector<string>& picked_positions)
 {
 
 }
