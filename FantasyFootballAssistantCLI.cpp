@@ -15,7 +15,7 @@ int main()
 	string file_path;
 	
 	cout << "Provide the path to the beersheets csv file: ";
-	cin >> file_path;
+	getline(cin, file_path);
 	ifstream CSVFileStream;
 	CSVFileStream.open(file_path);
 	CSVTable csv(CSVFileStream);
@@ -31,7 +31,7 @@ int main()
 	while (!exit_requested)
 	{
 		cout << "Type the name of the player someone else has picked, 'myturn' if you want a suggestion and 'exit' if you're done." << endl;
-		cin >> user_request;
+		getline(cin, user_request);
 		
 		if (user_request == "myturn")
 		{
