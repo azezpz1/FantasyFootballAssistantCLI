@@ -75,6 +75,7 @@ void SuggestAPlayer(CSVTable& csv, map<string, size_t>& picked_positions, map<st
 	cout << "You should pick: " << best_player << " (" << best_player << ")";
 	picked_positions[best_position]++;
 	desired_positions[best_position]--;
+	LogAPick(csv, best_player);
 }
 
 void LogAPick(CSVTable& csv, string input)
