@@ -4,5 +4,5 @@
 #include <vector>
 #include "CSVTable.h"
 
-void SuggestAPlayer(CSVTable& csv, std::map<std::string, size_t>& picked_positions, std::map<std::string, size_t>& desired_positions, std::map<std::string, size_t>& bench_positions);
+void SuggestAPlayer(CSVTable& csv, std::map<std::string, size_t>& picked_positions, std::map<std::string, size_t>& desired_positions);
 void LogAPick(CSVTable& csv, std::string user_request);

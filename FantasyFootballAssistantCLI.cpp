@@ -24,8 +24,7 @@ int main()
 
 	//position, count
 	map<string, size_t> picked_positions = { {"QB", 0}, {"WR", 0}, {"RB", 0}, {"TE", 0}, {"K", 0}, {"DEF", 0 } };
-	map<string, size_t> desired_positions = { {"QB", 1}, {"WR", 3}, {"RB", 2}, {"TE", 1}, {"K", 1}, {"DEF", 1 } };
-	map<string, size_t> bench_positions = { {"QB", 1}, {"WR", 2}, {"RB", 2}, {"TE", 1}, {"K", 0}, {"DEF", 0 } };
+	map<string, size_t> desired_positions = { {"QB", 2}, {"WR", 5}, {"RB", 4}, {"TE", 2}, {"K", 1}, {"DEF", 1 } };
 	
 	bool exit_requested = false;
 	string user_request;
@@ -36,7 +35,7 @@ int main()
 		
 		if (user_request == "myturn")
 		{
-			SuggestAPlayer(csv, picked_positions, desired_positions, bench_positions);
+			SuggestAPlayer(csv, picked_positions, desired_positions);
 		}
 
 		else if (user_request == "exit")
@@ -53,7 +52,7 @@ int main()
 
 }
 
-void SuggestAPlayer(CSVTable& csv, map<string, size_t>& picked_positions, map<string, size_t>& desired_positions, map<string, size_t>& bench_positions)
+void SuggestAPlayer(CSVTable& csv, map<string, size_t>& picked_positions, map<string, size_t>& desired_positions)
 {
 
 }
