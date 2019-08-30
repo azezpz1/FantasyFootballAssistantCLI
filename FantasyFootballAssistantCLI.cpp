@@ -61,16 +61,21 @@ void SuggestAPlayer(CSVTable& csv, map<string, size_t>& picked_positions, map<st
 void LogAPick(CSVTable& csv, string input)
 {
 	int count = 0;
+	bool player_found = false;
 	for (CSVRow row : csv.rows)
 	{
-		string player_name = row.elements["Name"];
-		if (player_name == input)
+		if (!player_found)
 		{
-			csv.rows.erase(csv.rows.begin() + count);
-		}
-		else
-		{
-			count++;
+			string player_name = row.elements["Name"];
+			if (player_name == input)
+			{
+				csv.rows.erase(csv.rows.begin() + count);
+				player_found = true;
+			}
+			else
+			{
+				count++;
+			}
 		}
 	}
 }
