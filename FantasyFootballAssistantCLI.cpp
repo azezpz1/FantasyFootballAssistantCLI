@@ -22,7 +22,7 @@ int main()
 	cout << "File loaded." << endl;
 	cout << endl;
 
-	vector<string> picked_positions;
+	map<string, size_t> picked_positions;  //position, count
 	bool exit_requested = false;
 	string user_request;
 	while (!exit_requested)
@@ -49,7 +49,7 @@ int main()
 
 }
 
-void SuggestAPlayer(CSVTable& csv, vector<string>& picked_positions)
+void SuggestAPlayer(CSVTable& csv, map<string, size_t>& picked_positions)
 {
 
 }
