@@ -68,6 +68,7 @@ void SuggestAPlayer(CSVTable& csv, map<string, size_t>& picked_positions, map<st
 				// and it's in a position we need
 				best_player = row.elements["Name"];
 				best_position = row.elements["Position"];
+				highest_value = stod(row.elements["Mean Value"]);
 			}
 		}
 	}
