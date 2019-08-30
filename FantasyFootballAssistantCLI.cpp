@@ -54,6 +54,24 @@ int main()
 
 void SuggestAPlayer(CSVTable& csv, map<string, size_t>& picked_positions, map<string, size_t>& desired_positions)
 {
+	double highest_value = 0.0;
+	string best_player;
+	string best_position;
+
+	for (CSVRow row : csv.rows)
+	{
+		if (stod(row.elements["Mean Value"]) > highest_value)
+		{
+			// this is the best player we've seen so far
+			if (desired_positions[row.elements["Position"]] > 0)
+			{
+				// and it's in a position we need
+				best_player = row.elements["Name"];
+				best_position = row.elements["Position"];
+			}
+		}
+	}
+
 
 }
 
