@@ -72,7 +72,7 @@ void SuggestAPlayer(CSVTable& csv, map<string, size_t>& picked_positions, map<st
 		}
 	}
 
-	cout << "You should pick: " << best_player << " (" << best_player << ")" <<endl;
+	cout << "You should pick: " << best_player << " (" << best_player << ")";
 	picked_positions[best_position]++;
 	desired_positions[best_position]--;
 }
@@ -81,16 +81,14 @@ void LogAPick(CSVTable& csv, string input)
 {
 	int count = 0;
 	bool player_found = false;
-	vector<CSVRow> original_rows = csv.rows;
-	vector<CSVRow> editable_rows = csv.rows;
-	for (CSVRow row : original_rows)
+	for (CSVRow row : csv.rows)
 	{
 		if (!player_found)
 		{
 			string player_name = row.elements["Name"];
 			if (player_name == input)
 			{
-				editable_rows.erase(csv.rows.begin() + count);
+				csv.rows.erase(csv.rows.begin() + count);
 				player_found = true;
 			}
 			else
@@ -99,5 +97,4 @@ void LogAPick(CSVTable& csv, string input)
 			}
 		}
 	}
-	csv.rows = editable_rows;
 }
